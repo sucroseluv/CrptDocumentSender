@@ -17,9 +17,9 @@ import java.util.concurrent.Semaphore;
 import java.util.concurrent.TimeUnit;
 
 public class CrptApi {
-    private HttpClient client;
-    private TimeUnit concurrentUnit;
-    private Semaphore semaphore;
+    private final HttpClient client;
+    private final TimeUnit concurrentUnit;
+    private final Semaphore semaphore;
 
     public CrptApi(TimeUnit concurrentUnit, int requestLimit) {
         this.concurrentUnit = concurrentUnit;
